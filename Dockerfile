@@ -1,6 +1,6 @@
 FROM java:8
 
-ENV YOUTRACK_VERSION 6.5.16953
+ENV YOUTRACK_VERSION 6.5.16981
 
 RUN wget http://download.jetbrains.com/charisma/youtrack-$YOUTRACK_VERSION.zip \
     && unzip youtrack-$YOUTRACK_VERSION.zip -d /opt/youtrack \
