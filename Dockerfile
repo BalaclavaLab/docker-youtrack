@@ -1,12 +1,12 @@
 FROM java:8-alpine
 
-ENV YOUTRACK_VERSION 7.0.27505
+ENV YOUTRACK_VERSION 2017.1.30973
 
 RUN wget http://download.jetbrains.com/charisma/youtrack-$YOUTRACK_VERSION.zip \
     && mkdir -p /opt/youtrack \
     && unzip youtrack-$YOUTRACK_VERSION.zip -d /opt/youtrack \
-    && mv /opt/youtrack/youtrack-27477/* /opt/youtrack \
-    && rmdir /opt/youtrack/youtrack-27477 \
+    && mv /opt/youtrack/youtrack-$YOUTRACK_VERSION/* /opt/youtrack \
+    && rmdir /opt/youtrack/youtrack-$YOUTRACK_VERSION \
     && rm youtrack-$YOUTRACK_VERSION.zip
 
 VOLUME ["/opt/youtrack/conf", "/opt/youtrack/data", "/opt/youtrack/logs", "/opt/youtrack/backups"]
