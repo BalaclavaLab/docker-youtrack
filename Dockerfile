@@ -1,6 +1,6 @@
 FROM java:8-alpine
 
-ENV YOUTRACK_VERSION 2017.1.30973
+ENV YOUTRACK_VERSION 2017.2.33390
 
 RUN wget http://download.jetbrains.com/charisma/youtrack-$YOUTRACK_VERSION.zip \
     && mkdir -p /opt/youtrack \
